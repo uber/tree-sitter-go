@@ -97,7 +97,7 @@ module.exports = grammar({
     $._expression,
     $._type,
     $._simple_type,
-    $._statement,
+    $.statement,
     $._simple_statement,
   ],
 
@@ -105,7 +105,7 @@ module.exports = grammar({
     source_file: $ => repeat(choice(
       // Unlike a Go compiler, we accept statements at top-level to enable
       // parsing of partial code snippets in documentation (see #63).
-      seq($._statement, terminator),
+      seq($.statement, terminator),
       seq($._top_level_declaration, optional(terminator)),
     )),
 
@@ -431,8 +431,8 @@ module.exports = grammar({
 
     statement_list: $ => choice(
       seq(
-        $._statement,
-        repeat(seq(terminator, $._statement)),
+        $.statement,
+        repeat(seq(terminator, $.statement)),
         optional(seq(
           terminator,
           optional(alias($.empty_labeled_statement, $.labeled_statement))
@@ -441,7 +441,7 @@ module.exports = grammar({
       alias($.empty_labeled_statement, $.labeled_statement)
     ),
 
-    _statement: $ => choice(
+    statement: $ => choice(
       $._declaration,
       $._simple_statement,
       $.return_statement,
@@ -513,7 +513,7 @@ module.exports = grammar({
     labeled_statement: $ => seq(
       field('label', alias($.identifier, $.label_name)),
       ':',
-      $._statement
+      $.statement
     ),
 
     empty_labeled_statement: $ => seq(

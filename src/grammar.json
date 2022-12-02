@@ -12,7 +12,7 @@
             "members": [
               {
                 "type": "SYMBOL",
-                "name": "_statement"
+                "name": "statement"
               },
               {
                 "type": "CHOICE",
@@ -1978,7 +1978,7 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "_statement"
+              "name": "statement"
             },
             {
               "type": "REPEAT",
@@ -2000,7 +2000,7 @@
                   },
                   {
                     "type": "SYMBOL",
-                    "name": "_statement"
+                    "name": "statement"
                   }
                 ]
               }
@@ -2061,7 +2061,7 @@
         }
       ]
     },
-    "_statement": {
+    "statement": {
       "type": "CHOICE",
       "members": [
         {
@@ -2390,7 +2390,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_statement"
+          "name": "statement"
         }
       ]
     },
@@ -6830,7 +6830,7 @@
     "_expression",
     "_type",
     "_simple_type",
-    "_statement",
+    "statement",
     "_simple_statement"
   ]
 }
