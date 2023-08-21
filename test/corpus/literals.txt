@@ -302,7 +302,6 @@ const (
 )
 
 --------------------------------------------------------------------------------
-
 (source_file
   (package_clause
     (package_identifier))
@@ -310,19 +309,22 @@ const (
     (const_spec
       (identifier)
       (expression_list
-        (interpreted_string_literal)))
+        (interpreted_string_literal (interpreted_string_literal_basic_content))))
     (const_spec
       (identifier)
       (expression_list
         (interpreted_string_literal
-          (escape_sequence))))
+          (interpreted_string_literal_basic_content)
+          (escape_sequence)
+          (interpreted_string_literal_basic_content))))
     (const_spec
       (identifier)
       (expression_list
         (interpreted_string_literal
           (escape_sequence))))
     (ERROR
-      (identifier))))
+      (identifier)
+      (interpreted_string_literal_basic_content))))
 
 ================================================================================
 Slice literals
@@ -361,7 +363,7 @@ const s3 = []string{
             (type_identifier))
           (literal_value
             (literal_element
-              (interpreted_string_literal)))))))
+              (interpreted_string_literal (interpreted_string_literal_basic_content))))))))
   (const_declaration
     (const_spec
       (identifier)
@@ -371,9 +373,9 @@ const s3 = []string{
             (type_identifier))
           (literal_value
             (literal_element
-              (interpreted_string_literal))
+              (interpreted_string_literal (interpreted_string_literal_basic_content)))
             (literal_element
-              (interpreted_string_literal))))))))
+              (interpreted_string_literal (interpreted_string_literal_basic_content)))))))))
 
 ================================================================================
 Array literals with implicit length
@@ -430,14 +432,14 @@ const s = map[string]string{
           (literal_value
             (keyed_element
               (literal_element
-                (interpreted_string_literal))
+                (interpreted_string_literal (interpreted_string_literal_basic_content)))
               (literal_element
-                (interpreted_string_literal)))
+                (interpreted_string_literal (interpreted_string_literal_basic_content))))
             (keyed_element
               (literal_element
-                (interpreted_string_literal))
+                (interpreted_string_literal (interpreted_string_literal_basic_content)))
               (literal_element
-                (interpreted_string_literal)))))))))
+                (interpreted_string_literal (interpreted_string_literal_basic_content))))))))))
 
 ================================================================================
 Struct literals
@@ -472,12 +474,12 @@ const g1 = Foo[float64, Bar[int]] { }
               (literal_element
                 (identifier))
               (literal_element
-                (interpreted_string_literal)))
+                (interpreted_string_literal (interpreted_string_literal_basic_content))))
             (keyed_element
               (literal_element
                 (identifier))
               (literal_element
-                (interpreted_string_literal))))))))
+                (interpreted_string_literal (interpreted_string_literal_basic_content)))))))))
   (const_declaration
     (const_spec
       (identifier)

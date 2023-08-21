@@ -4515,7 +4515,7 @@
             "members": [
               {
                 "type": "SYMBOL",
-                "name": "_interpreted_string_literal_basic_content"
+                "name": "interpreted_string_literal_basic_content"
               },
               {
                 "type": "SYMBOL",
@@ -4533,7 +4533,7 @@
         }
       ]
     },
-    "_interpreted_string_literal_basic_content": {
+    "interpreted_string_literal_basic_content": {
       "type": "IMMEDIATE_TOKEN",
       "content": {
         "type": "PREC",

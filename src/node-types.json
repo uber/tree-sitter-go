@@ -1454,6 +1454,10 @@
         {
           "type": "escape_sequence",
           "named": true
+        },
+        {
+          "type": "interpreted_string_literal_basic_content",
+          "named": true
         }
       ]
     }
@@ -2809,6 +2813,10 @@
   {
     "type": "interface",
     "named": false
+  },
+  {
+    "type": "interpreted_string_literal_basic_content",
+    "named": true
   },
   {
     "type": "iota",

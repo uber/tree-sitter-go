@@ -24,10 +24,10 @@ import alias "some/package"
 
 (source_file
   (package_clause (package_identifier))
-  (import_declaration (import_spec (interpreted_string_literal)))
-  (import_declaration (import_spec (dot) (interpreted_string_literal)))
-  (import_declaration (import_spec (blank_identifier) (interpreted_string_literal)))
-  (import_declaration (import_spec (package_identifier) (interpreted_string_literal))))
+  (import_declaration (import_spec (interpreted_string_literal (interpreted_string_literal_basic_content))))
+  (import_declaration (import_spec (dot) (interpreted_string_literal (interpreted_string_literal_basic_content))))
+  (import_declaration (import_spec (blank_identifier) (interpreted_string_literal (interpreted_string_literal_basic_content))))
+  (import_declaration (import_spec (package_identifier) (interpreted_string_literal (interpreted_string_literal_basic_content) ))))
 
 ============================================
 Grouped import declarations
@@ -50,12 +50,12 @@ import (
   (package_clause (package_identifier))
   (import_declaration (import_spec_list))
   (import_declaration (import_spec_list
-    (import_spec (interpreted_string_literal))))
+    (import_spec (interpreted_string_literal (interpreted_string_literal_basic_content)))))
   (import_declaration (import_spec_list
-    (import_spec (interpreted_string_literal))
-    (import_spec (dot) (interpreted_string_literal))
-    (import_spec (blank_identifier) (interpreted_string_literal))
-    (import_spec (package_identifier) (interpreted_string_literal)))))
+    (import_spec (interpreted_string_literal (interpreted_string_literal_basic_content)))
+    (import_spec (dot) (interpreted_string_literal (interpreted_string_literal_basic_content)))
+    (import_spec (blank_identifier) (interpreted_string_literal (interpreted_string_literal_basic_content)))
+    (import_spec (package_identifier) (interpreted_string_literal (interpreted_string_literal_basic_content))))))
 
 ============================================
 Block comments
