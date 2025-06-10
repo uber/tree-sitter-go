@@ -21,7 +21,7 @@ const
   unicodeValue = unicodeChar,
   letter = choice(unicodeLetter, '_'),
 
-  newline = '\n',
+  newline = /\n/,
   terminator = choice(newline, ';'),
 
   hexDigit = /[0-9a-fA-F]/,
